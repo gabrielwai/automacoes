@@ -1,5 +1,9 @@
+import ResetSenha
+from ResetSenha import resetSenhaADP
 from Colaborador import Colaborador
 import buscarColaborador
+import Requisicao
+import Incidente
 
 
 class ADP:
@@ -17,15 +21,29 @@ class ADP:
 
 
     def getUsuario(self):
+        '''
+        :return: (string) Usuário para o login no sistema ADP referênte a empresa do colaborador.
+        '''
         return self.__colaborador.getUsuario()
 
 
     def getSenha(self):
+        '''
+        :return: (string) Senha para o login no sistema ADP referênte a empresa do colaborador.
+        '''
         return self.__colaborador.getSenha()
 
 
-    def resetSenha(self):
-        pass
+    def resetSenha(self, chamadoID):
+        resetSenhaADP(chamadoID, self.__colaborador.getUsuario(), self.__colaborador.getSenha(),
+                      self.__colaborador.getNome(), self.__colaborador.getEmail(),
+                      self.__colaborador.getCpf(), self.getLink())
+        if chamadoID[0] == 'R':
+            Requisicao.analisarChamado(chamadoID)
+            Requisicao.resolverChamado(chamadoID)
+        else:
+            Incidente.analisarChamado(chamadoID)
+            Incidente.resolverChamado(chamadoID)
 
 
     def buscarColaborador(self, nome=None, email=None, cpf=None):
