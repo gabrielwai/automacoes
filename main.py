@@ -1,12 +1,12 @@
 from ADP import ADP
 from Mapfre import Mapfre
 
-chamado = ADP("Mapfre")
-chamadoB = ADP("BrasilSEG")
-chamadoC = Mapfre("MAPFRE SEGUROS GERAIS", 'xxx', 111)
+chamado = ADP("Mapfre", "xxx", "111")
+chamadoB = ADP("BrasilSEG", "yyy", "222")
 
 print(type(chamado))
 
-print(chamadoC.getEmpresa())
-print(chamadoC.getUsuario())
-print(chamadoC.getSenha())
+print(chamadoB.getEmpresa())
+print(chamadoB.getUsuario())
+print(chamadoB.getSenha())
+print(chamadoB.getLink())
