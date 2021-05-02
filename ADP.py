@@ -1,14 +1,12 @@
+from Colaborador import Colaborador
 import buscarColaborador
 
 
 class ADP:
 
-    def __init__(self, empresa, usuario, senha, link='https://www.adpexpertbrasil.com'):
-        self.__empresa = empresa
-        self.__usuario = usuario
-        self.__senha = senha
+    def __init__(self, Colaborador, link='https://www.adpexpertbrasil.com'):
         self.__link = link
-
+        self.__colaborador = Colaborador
 
     def setLink(self, link):
         self.__link = link
@@ -19,26 +17,18 @@ class ADP:
 
 
     def getUsuario(self):
-        return self.__usuario
+        return self.__colaborador.getUsuario()
 
 
     def getSenha(self):
-        return self.__senha
-
-
-    def getEmpresa(self):
-        return self.__empresa
-
-
-    def setEmpresa(self, empresa):
-        self.__empresa = empresa
+        return self.__colaborador.getSenha()
 
 
     def resetSenha(self):
         pass
 
 
-    def buscarColaborador(self, nome='', email='', cpf=''):
+    def buscarColaborador(self, nome=None, email=None, cpf=None):
         '''
         :param nome: nome do colaborador
         :param email: e-mail do colaborador
@@ -52,3 +42,8 @@ class ADP:
             return True
         else:
             return False
+
+
+    def localizarColaborador(self, nome):
+        # localizar colaborador pela 'Manutenção de Currículo' (menu_full)
+        pass

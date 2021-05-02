@@ -1,12 +1,22 @@
 from ADP import ADP
+from Colaborador import Colaborador
 from Mapfre import Mapfre
 
-chamado = ADP("Mapfre", "xxx", "111")
-chamadoB = ADP("BrasilSEG", "yyy", "222")
+ColaboradorA = Colaborador("Mapfre", "xxx", "111")
+chamadoA = ADP(ColaboradorA)
+ColaboradorB = Colaborador("BrasilSEG", "yyy", "222")
+chamadoB = ADP(ColaboradorB)
 
-print(type(chamado))
+print(type(chamadoA))
 
-print(chamadoB.getEmpresa())
-print(chamadoB.getUsuario())
-print(chamadoB.getSenha())
-print(chamadoB.getLink())
+print(ColaboradorA.getEmpresa())
+print(ColaboradorA.getUsuario())
+print(ColaboradorA.getSenha())
+
+print(ColaboradorA.getEmail())
+
+print(chamadoA.getLink())
+
+print(chamadoA.getUsuario())
+print(chamadoA.getSenha())
+
