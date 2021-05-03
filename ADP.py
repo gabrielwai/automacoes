@@ -1,9 +1,11 @@
 import ResetSenha
-from ResetSenha import resetSenhaADP
-from Colaborador import Colaborador
 import buscarColaborador
 import Requisicao
 import Incidente
+from ResetSenha import resetSenhaADP
+from Colaborador import Colaborador
+from timesheets import registrarChamado
+from timesheets import registrarFalha
 
 
 class ADP:
@@ -35,15 +37,35 @@ class ADP:
 
 
     def resetSenha(self, chamadoID):
-        resetSenhaADP(chamadoID, self.__colaborador.getUsuario(), self.__colaborador.getSenha(),
+        '''
+        Método que efetivamente reseta a senha do colaborador para o sistema ADP
+        :param chamadoID: ID do chamado
+        :return: (boolean) Se conseguiu, ou não, resetar a senha
+        '''
+        if resetSenhaADP(chamadoID, self.__colaborador.getUsuario(), self.__colaborador.getSenha(),
                       self.__colaborador.getNome(), self.__colaborador.getEmail(),
-                      self.__colaborador.getCpf(), self.getLink())
-        if chamadoID[0] == 'R':
-            Requisicao.analisarChamado(chamadoID)
-            Requisicao.resolverChamado(chamadoID)
+                      self.__colaborador.getCpf(), self.getLink()):
+            if chamadoID[0] == 'R':
+                Requisicao.analisarChamado(chamadoID)
+                Requisicao.resolverChamado(chamadoID)
+
+                registrarChamado(chamadoID, self.getDescricao())
+                return True
+            else:
+                Incidente.analisarChamado(chamadoID)
+                Incidente.resolverChamado(chamadoID)
+
+                registrarChamado(chamadoID, self.getDescricao())
+                return True
         else:
-            Incidente.analisarChamado(chamadoID)
-            Incidente.resolverChamado(chamadoID)
+            registrarFalha(chamadoID)
+            return False
+
+
+    def getDescricao(self):
+        with open("config/descricao-padrao.txt", "r") as descricao:
+            descricao.read()
+        return descricao
 
 
     def buscarColaborador(self, nome=None, email=None, cpf=None):
