@@ -1,84 +1,43 @@
 class Colaborador:
 
-    def __init__(self, empresa, empresaUsuario, empresaSenha, nome=None, email=None, cpf=None):
-        self.__empresa = empresa
-        self.__empresaUsuario = empresaUsuario
-        self.__empresaSenha = empresaSenha
-        self.__nome = nome
-        self.__email = email
-        self.__cpf = cpf
+    def __init__(self, empresa, nome='', email='', cpf=''):
 
+        self.__cpf = (11 - len(str(cpf))) * "0" + str(cpf)
 
-    def getUsuario(self):
-        '''
-        :return: (string) Usuário para o login no sistema ADP referênte a empresa do colaborador
-        '''
-        return self.__empresaUsuario
+        self.__empresa = empresa.strip().upper()
 
+        self.__nome = nome.strip().upper()
 
-    def setUsuario(self, empresaUsuario):
-        '''
-        Especifica usuário para o login no sistema ADP referênte a empresa do colaborador.
-        :param empresaUsuario: (string) empresa do Colaborador.
-        :return: None
-        '''
-        self.__empresaUsuario = empresaUsuario
-
-
-    def getSenha(self):
-        '''
-        :return: (string) Senha para o login no sistema ADP referênte a empresa do colaborador.
-        '''
-        return self.__empresaSenha
-
-
-    def setSenha(self, empresaSenha):
-        '''
-        Especifica senha para o login no sistema ADP referênte a empresa do colaborador.
-        :param empresaSenha: (string) Senha referente ao login no sistema ADP
-        referênte a empresa do colaborador.
-        :return: None
-        '''
-        self.__empresaSenha = empresaSenha
+        self.__email = email.strip().upper()
 
 
     def getEmpresa(self):
-        return self.__empresaSenha
+        return self.__empresa
 
 
-    def setEmpresa(self, empresaSenha):
-        self.__empresaSenha = empresaSenha
+    def setEmpresa(self, empresa):
+        self.__empresa = empresa.strip().upper()
 
 
     def getEmail(self):
-        if self.__email != None:
-            return self.__email
-        else:
-            return None
+        return self.__email
 
 
     def setEmail(self, email):
-        self.__email = email
+        self.__email = email.strip().upper()
 
 
-    def getNome(self, nome):
-        if self.__nome != None:
-            return self.__nome
-        else:
-            return None
+    def getNome(self):
+        return self.__nome
 
 
     def setNome(self, nome):
-        self.__nome = nome
+        self.__nome = nome.strip().upper()
 
 
-    def getCpf(self, cpf):
-        if self.__cpf != None:
-            return self.__cpf
-        else:
-            return None
+    def getCpf(self):
+        return self.__cpf
 
 
     def setCpf(self, cpf):
-        self.__cpf = cpf
-
+        self.__cpf = str(cpf).strip()
