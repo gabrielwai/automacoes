@@ -1,28 +1,21 @@
-class Chamado():
-
-    def __init__(self, SD=None):
-        self.__chamados = set()
-        self.__SD = SD
-
-
-    def getSD(self):
-        return self.__SD
+from Chamados.ChamadoFactory import ChamadoFactory
+from Chamados.Interacao import Interacao
+from Chamados.Incidente import Incidente
+from Chamados.Requisicao import Requisicao
 
 
-    def setSD(self, SD):
-        self.__SD = SD
+class Chamado(ChamadoFactory):
 
 
-    def adicionarChamadoRelacionado(self, chamado):
-        self.__chamados.add(chamado.strip().upper())
+    @classmethod
+    def novoChamado(cls, codigoChamado):
+        tipo = codigoChamado[:2]
 
-
-    def getChamadosRelacionados(self):
-        return self.__chamados
-
-
-    def removerChamadoRelacionado(self, chamado):
-        chamado = chamado.strip().upper()
-        # if chamado not in self.__chamados:
-        #     print(f"Chamado '{chamado}' não está relacionado com '{self.getSD()}'")
-        self.__chamados.discard(chamado)
+        if tipo == 'SD':
+            return Interacao()
+        elif tipo == 'IM':
+            return Incidente(codigoChamado)
+        elif tipo == 'RF':
+            return Requisicao(codigoChamado)
+        else:
+            return None

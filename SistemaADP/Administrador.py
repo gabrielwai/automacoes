@@ -22,6 +22,7 @@ class Administrador:
         administrador['empresa'] = [empresas[0][i].tag for i in range(len(empresas[0]))]
 
         for i in range(len(administrador['empresa'])):
+
             if administrador['empresa'][i] in empresa:
                 usr = xml.findall('adm/empresas/' + administrador['empresa'][i])
 

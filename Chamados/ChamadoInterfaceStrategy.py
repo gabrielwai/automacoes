@@ -14,3 +14,7 @@ class TiposDeChamados(ABC):
     @abstractmethod
     def resolver(self, chamado, ADP, HPServiceManager):
         pass
+
+    @abstractmethod
+    def getCodigoChamado(self):
+        pass
