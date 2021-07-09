@@ -1,0 +1,313 @@
+1623819428357	geckodriver	INFO	Listening on 127.0.0.1:56793
+1623819428364	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCpdTg7"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819433561	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819441384	Marionette	INFO	Listening on port 36447
+1623819441650	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623819508545	Marionette	INFO	Stopped listening on port 36447
+1623819509235	geckodriver	INFO	Listening on 127.0.0.1:40521
+1623819509243	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJCaDVW"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819511412	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819515356	Marionette	INFO	Listening on port 43651
+1623819515395	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  AbortError
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  AbortError
+1623819518437	Marionette	INFO	Stopped listening on port 43651
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623819549874	geckodriver	INFO	Listening on 127.0.0.1:54479
+1623819549896	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexkv5aa"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819554114	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819561800	Marionette	INFO	Listening on port 33645
+1623819561865	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 833: NotAllowedError: Shutting down and refusing additional I/O tasks
+ExceptionHandler::GenerateDump cloned child 47419
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+1623819592785	Marionette	INFO	Stopped listening on port 33645
+1623819739556	geckodriver	INFO	Listening on 127.0.0.1:44967
+1623819740506	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOUH0m3"
+Traceback (most recent call last):
+  File "/usr/bin/lsb_release", line 25, in <module>
+    import lsb_release
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 914, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1342, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1314, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1469, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 101, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 93, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_stat
+KeyboardInterrupt
+1623819744052	geckodriver	INFO	Listening on 127.0.0.1:56867
+1623819744067	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKLXBlA"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819747799	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819752698	Marionette	INFO	Listening on port 38603
+1623819752816	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623819863486	Marionette	INFO	Stopped listening on port 38603
+1623819903890	geckodriver	INFO	Listening on 127.0.0.1:58415
+1623819903897	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileavXG6X"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819905798	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819910200	Marionette	INFO	Listening on port 36753
+1623819910239	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623819927916	Marionette	INFO	Stopped listening on port 36753
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623819955368	geckodriver	INFO	Listening on 127.0.0.1:44039
+1623819955374	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTYr7G2"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623819957296	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623819961182	Marionette	INFO	Listening on port 42155
+1623819961226	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1623819966559	Marionette	INFO	Stopped listening on port 42155
+1623820010048	geckodriver	INFO	Listening on 127.0.0.1:47049
+1623820010054	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSFpPFO"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820012283	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820015838	Marionette	INFO	Listening on port 38663
+1623820015905	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820035429	Marionette	INFO	Stopped listening on port 38663
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623820036374	geckodriver	INFO	Listening on 127.0.0.1:44621
+1623820036379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileYpPa0k"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820038258	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820041586	Marionette	INFO	Listening on port 35057
+1623820041626	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820185414	geckodriver	INFO	Listening on 127.0.0.1:34293
+1623820185422	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileb4PNU5"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820187366	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820191085	Marionette	INFO	Listening on port 39071
+1623820191165	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820203276	Marionette	INFO	Stopped listening on port 39071
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623820205064	Marionette	INFO	Stopped listening on port 35057
+1623820207302	geckodriver	INFO	Listening on 127.0.0.1:34873
+1623820207308	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileCLJ9Ud"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820209083	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820212579	Marionette	INFO	Listening on port 32853
+1623820212655	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1623820228967	Marionette	INFO	Stopped listening on port 32853
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623820275078	geckodriver	INFO	Listening on 127.0.0.1:56927
+1623820275086	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTszHnp"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820276938	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820280633	Marionette	INFO	Listening on port 40939
+1623820280725	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820299292	Marionette	INFO	Stopped listening on port 40939
+1623820303998	geckodriver	INFO	Listening on 127.0.0.1:57637
+1623820304006	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHig4pd"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820306146	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820309683	Marionette	INFO	Listening on port 45201
+1623820309747	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820318444	Marionette	INFO	Stopped listening on port 45201
+1623820377286	geckodriver	INFO	Listening on 127.0.0.1:49563
+1623820377293	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDf724c"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820379218	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820383276	Marionette	INFO	Listening on port 33703
+1623820383333	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820391055	Marionette	INFO	Stopped listening on port 33703
+1623820653970	geckodriver	INFO	Listening on 127.0.0.1:42281
+1623820653976	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevSWGnx"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1623820656312	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1623820660017	Marionette	INFO	Listening on port 33063
+1623820660116	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623820687460	Marionette	INFO	Stopped listening on port 33063
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624068462326	geckodriver	INFO	Listening on 127.0.0.1:44469
+1624068463211	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileEPtlQv"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1624068466885	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEPtlQv/search.json.mozlz4", (void 0)))
+1624068472578	Marionette	INFO	Listening on port 38429
+1624068473126	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1624068476886	Marionette	INFO	Stopped listening on port 38429
+1625711166724	geckodriver	INFO	Listening on 127.0.0.1:33407
+1625711167184	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNz9QuJ"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625711169524	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNz9QuJ/search.json.mozlz4", (void 0)))
+1625711174862	Marionette	INFO	Listening on port 35593
+1625711175139	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625711183106	Marionette	INFO	Stopped listening on port 35593
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1625718236017	geckodriver	INFO	Listening on 127.0.0.1:58329
+1625718236903	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileO2SnOI"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718239698	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileO2SnOI/search.json.mozlz4", (void 0)))
+1625718247011	Marionette	INFO	Listening on port 46627
+1625718247173	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625718254335	Marionette	INFO	Stopped listening on port 46627
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1625718261086	geckodriver	INFO	Listening on 127.0.0.1:42179
+1625718261131	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilepQv2G5"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718263021	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepQv2G5/search.json.mozlz4", (void 0)))
+1625718266668	Marionette	INFO	Listening on port 40407
+1625718266972	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625718278858	Marionette	INFO	Stopped listening on port 40407
+1625718485695	geckodriver	INFO	Listening on 127.0.0.1:55467
+1625718485701	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevX5TUk"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718487581	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevX5TUk/search.json.mozlz4", (void 0)))
+1625718490708	Marionette	INFO	Listening on port 46647
+1625718491130	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625718502110	Marionette	INFO	Stopped listening on port 46647
+1625718575892	geckodriver	INFO	Listening on 127.0.0.1:49319
+1625718575899	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDRhX8J"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718577618	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDRhX8J/search.json.mozlz4", (void 0)))
+1625718581018	Marionette	INFO	Listening on port 44277
+1625718581332	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625718587791	Marionette	INFO	Stopped listening on port 44277
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1625718780102	geckodriver	INFO	Listening on 127.0.0.1:44357
+1625718780109	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilexec5YQ"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718781851	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexec5YQ/search.json.mozlz4", (void 0)))
+1625718785305	Marionette	INFO	Listening on port 35595
+1625718785344	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625718791781	Marionette	INFO	Stopped listening on port 35595
+1625718955110	geckodriver	INFO	Listening on 127.0.0.1:37365
+1625718955117	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZSqjvA"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625718956875	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZSqjvA/search.json.mozlz4", (void 0)))
+1625718960042	Marionette	INFO	Listening on port 34581
+1625718960340	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 27: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 196: Error: Data is not ready.
+JavaScript error: resource://activity-stream/lib/PlacesFeed.jsm, line 167: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.addObserver]
+JavaScript error: resource://gre/modules/ExtensionSettingsStore.jsm, line 122: Error: The ExtensionSettingsStore was accessed before the initialize promise resolved.
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2536\"  data: no]"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2536\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2536\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2536\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2536\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  AbortError
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  AbortError
+1625718962571	Marionette	INFO	Stopped listening on port 34581
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 829: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+ExceptionHandler::GenerateDump cloned child 20529ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+1625845822694	geckodriver	INFO	Listening on 127.0.0.1:52371
+1625845823591	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2Hrt77"
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+[GFX1-]: glxtest: libEGL missing eglGetDisplayDriverName
+1625845831875	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2Hrt77/search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1625845839708	Marionette	INFO	Listening on port 43103
+1625845840012	Marionette	WARN	TLS certificate errors will be ignored for this session
+1625845850905	Marionette	INFO	Stopped listening on port 43103

@@ -8,6 +8,10 @@ class TiposDeChamados(ABC):
         pass
 
     @abstractmethod
+    def localizarChamado(self, HPServiceManager):
+        pass
+
+    @abstractmethod
     def designar(self, chamado, ADP, HPServiceManager):
         pass
 

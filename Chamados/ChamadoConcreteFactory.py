@@ -1,14 +1,13 @@
-from Chamados.ChamadoFactory import ChamadoFactory
+from Chamados.ChamadoAbstractFactory import ChamadoAbtractFactory
 from Chamados.Interacao import Interacao
 from Chamados.Incidente import Incidente
 from Chamados.Requisicao import Requisicao
 
 
-class Chamado(ChamadoFactory):
+class Chamado(ChamadoAbtractFactory):
 
-
-    @classmethod
-    def novoChamado(cls, codigoChamado):
+    @staticmethod
+    def novoChamado(codigoChamado):
         tipo = codigoChamado[:2]
 
         if tipo == 'SD':

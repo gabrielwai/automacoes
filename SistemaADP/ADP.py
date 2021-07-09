@@ -1,57 +1,36 @@
+from Chrome import Chrome
+from Navegador import Navegador
+from NavegadorFactory import NavegadorFactory
+from Autentificador import Autentificador
 from Empresas import Empresas
-from selenium import webdriver
 import Automacoes.ADP
 
 
 class ADP:
 #futuras classes filhas da ADP: menu_full; painel_1 (interface); adm_seg
-    def __init__(self, link='https://expert.brasil.adp.com/', background=True):
+    def __init__(self, tipoNavegador, link='https://expert.brasil.adp.com/', backgorund=True):
+        self.__backgorund = bool(backgorund)
         self.__navegador = None
         self.__link = link
-        self.__background = background
-
-
-    def __setup(self):
-        user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
-
-        self.options = webdriver.ChromeOptions()
-        self.options.headless = True
-        self.options.add_argument(f'user-agent={user_agent}')
-        self.options.add_argument("--window-size=1280,720")
-        self.options.add_argument('--ignore-certificate-errors')
-        self.options.add_argument('--allow-running-insecure-content')
-        self.options.add_argument("--disable-extensions")
-        self.options.add_argument("--proxy-server='direct://'")
-        self.options.add_argument("--proxy-bypass-list=*")
-        self.options.add_argument("--start-maximized")
-        self.options.add_argument('--disable-gpu')
-        self.options.add_argument('--disable-dev-shm-usage')
-        self.options.add_argument('--no-sandbox')
-        self.__navegador = webdriver.Chrome(options=self.options)
+        self.__tipoNavegador = tipoNavegador
 
 
     def login(self, administrador, empresa):
-        if self.__background:
-           self.__setup()
-        else:
-            self.__navegador = webdriver.Chrome()
-
         verificador = True
 
-        if not (bool(administrador.getUsuario()) and bool(administrador.getSenha())):
+        if not Autentificador(administrador.getUsuario(), administrador.getSenha()):
             print('Insira o login para acesso ao sistema ADP no arquivo xml destinado ao administrador.')
             print('Falha ao realizar o login no sistema ADP.'); exit()
 
         empresa = empresa.strip().upper()
         for emp in Empresas:
             if emp.name in empresa:
-                if Automacoes.ADP.login(self.__getNavegador(), self.__link, administrador.getUsuario(), administrador.getSenha()):
+                if Automacoes.ADP.login(self.__getNavegador(), self.getLink(), administrador.getUsuario(), administrador.getSenha()):
                     Automacoes.ADP.escolherEmpresa(self.__getNavegador(), emp.name)
                     verificador = False
         if verificador:
-            print("Erro ao efetuar o login, verifique suas credenciais.")
+            print("Erro ao efetuar o login, verifique a resposta do navegador e suas credenciais de acesso.")
             exit()
-            return False
         else:
             return True
 
@@ -60,16 +39,34 @@ class ADP:
         return self.__link
 
 
+    def isbackgorund(self):
+        return self.__backgorund
+
+
+    def setBackground(self, backgorund):
+        backgorund = bool(backgorund)
+        self.__backgorund = backgorund
+
+
     def __getNavegador(self):
+        if not bool(self.__navegador):
+            self.__navegador = self.__tipoNavegador.criarNavegador()
         return self.__navegador
 
 
     def resetSenha(self, colaborador):
         if Automacoes.ADP.buscarColaborador(self.__getNavegador(), colaborador):
-            Automacoes.ADP.resetarSenha(self.__getNavegador(), colaborador)
-            return True
+            if Automacoes.ADP.resetarSenha(self.__getNavegador()):
+                return True
+            else:
+                print('Mais de um colaborador foi encontrado, '
+                      'cancelando operação de reset de senha...')
+                return False
         else:
             print("Usuário não encontrado para reset de senha:",
                   colaborador.getNome(), colaborador.getEmail(), colaborador.getCpf(),
                   "- empresa:", colaborador.getEmpresa())
             return False
+
+    def getTesteNavegador(self):
+        return self.__getNavegador()

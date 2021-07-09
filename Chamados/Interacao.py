@@ -2,7 +2,7 @@ class Interacao():
 
     def __init__(self, SD=''):
         self.__chamados = set()
-        self.__SD = SD.strip().upper()
+        self.setSD(SD)
 
 
     def getSD(self):
