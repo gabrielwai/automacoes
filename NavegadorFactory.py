@@ -1,8 +1,7 @@
-from Chrome import Chrome
-from Edge import Edge
-from FireFox import FireFox
+from Navegadores.Chrome import Chrome
+from Navegadores.FireFox import FireFox
+from Navegadores.Edge import Edge
 from NavegadorAbstractFactory import NavegadorAbstractFactory
-from Navegador import Navegador
 from selenium import webdriver
 
 
@@ -47,11 +46,12 @@ class NavegadorFactory(NavegadorAbstractFactory):
     def criarEdge(cls, background=True):
         options = None
 
-        if background:
+        if background & 0: # Microsoft Edge ainda não possui a funcionalidade de rodar em background na aplicação.
             options = cls.__setup()
 
-        navegador = Edge(options=options)
-        return navegador.getNavegador()
+        navegador = Edge()
+        navegador.setOptions(options)
+        return navegador
 
 
     @staticmethod

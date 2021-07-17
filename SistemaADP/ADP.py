@@ -1,9 +1,9 @@
-from Chrome import Chrome
-from Navegador import Navegador
+from sqlite3.dbapi2 import connect
 from NavegadorFactory import NavegadorFactory
-from Autentificador import Autentificador
 from Empresas import Empresas
 import Automacoes.ADP
+from sqlite3 import Connection
+#import sqlite3
 
 
 class ADP:
@@ -15,19 +15,28 @@ class ADP:
         self.__tipoNavegador = tipoNavegador
 
 
-    def login(self, administrador, empresa):
+    def banco(self):
+        #conn = connect('C:/Users/Gabri/Downloads/sqlite/sqlite-tools-win32-x86-3360000/jfmartins-adp.db')
+        conn = connect('./sqlite/jfmartins-adp.db')
+        curs = conn.cursor()
+
+        #curs.execute("insert into contas values ('usuario_3', 'senha_3', 'BRASILSEG');")
+        #conn.commit()
+
+        curs.execute("select * from contas;")
+        for usuario, senha, empresa in curs.fetchall():
+            print(usuario, senha, empresa)
+        
+
+        conn.close()
+
+
+    def login(self, usuario, senha, empresa):
         verificador = True
 
-        if not Autentificador(administrador.getUsuario(), administrador.getSenha()):
-            print('Insira o login para acesso ao sistema ADP no arquivo xml destinado ao administrador.')
-            print('Falha ao realizar o login no sistema ADP.'); exit()
-
-        empresa = empresa.strip().upper()
-        for emp in Empresas:
-            if emp.name in empresa:
-                if Automacoes.ADP.login(self.__getNavegador(), self.getLink(), administrador.getUsuario(), administrador.getSenha()):
-                    Automacoes.ADP.escolherEmpresa(self.__getNavegador(), emp.name)
-                    verificador = False
+        if Automacoes.ADP.login(self.__getNavegador(), self.getLink(), usuario, senha):
+            Automacoes.ADP.escolherEmpresa(self.__getNavegador(), empresa)
+            verificador = False
         if verificador:
             print("Erro ao efetuar o login, verifique a resposta do navegador e suas credenciais de acesso.")
             exit()
@@ -69,4 +78,5 @@ class ADP:
             return False
 
     def getTesteNavegador(self):
+        self.__getNavegador().get('https://www.google.com.br')
         return self.__getNavegador()
