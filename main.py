@@ -1,12 +1,27 @@
 from NavegadorFactory import NavegadorFactory
 from SistemaADP.ADP import ADP
-from SistemaADP.Administrador import Administrador
 from Colaborador import Colaborador
-from Empresas import Empresas
-from Chamados.ChamadoConcreteFactory import Chamado
 from Chamados.Incidente import Incidente
 from Chamados.HPServiceManager import HPServiceManager
+from time import sleep
 
 
-navegador = NavegadorFactory.criarEdge(background=False)
-adp = ADP(tipoNavegador=navegador)
+def main() -> None:
+    '''
+    adp = ADP(tipoNavegador=NavegadorFactory.criarChrome(background=True))
+    colaborador1 = Colaborador("BRASILSEG", is_terceiro=True, nome="Gabriel Wai")
+    
+    adp.login('Joao.Silva.25', 'Adp@123BSG', 'BRASILSEG')
+    adp.resetSenha(colaborador1)
+    '''
+    navegador2 = NavegadorFactory.criarChrome(background=False)
+    hp = HPServiceManager("JVDSILVA", "Mapfre2021$!", navegador2)
+    
+    IM = Incidente("IM02523288")
+    IM.localizarChamado(hp)
+    
+    sleep(225)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,6 +1,6 @@
 class Colaborador:
 
-    def __init__(self, empresa, nome='', email='', cpf=''):
+    def __init__(self, empresa: str, is_terceiro: bool, nome='', email='', cpf=''):
 
         self.__cpf = (11 - len(str(cpf))) * "0" + str(cpf)
 
@@ -10,9 +10,15 @@ class Colaborador:
 
         self.__email = email.strip().upper()
 
+        self.__terceiro = bool(is_terceiro)
 
-    def getEmpresa(self):
+
+    def getEmpresa(self) -> str:
         return self.__empresa
+
+
+    def is_terceiro(self) -> bool:
+        return self.__terceiro
 
 
     def setEmpresa(self, empresa):

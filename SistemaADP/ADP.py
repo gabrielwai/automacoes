@@ -65,7 +65,7 @@ class ADP:
 
     def resetSenha(self, colaborador):
         if Automacoes.ADP.buscarColaborador(self.__getNavegador(), colaborador):
-            if Automacoes.ADP.resetarSenha(self.__getNavegador()):
+            if Automacoes.ADP.resetarSenha(self.__getNavegador(), colaborador.is_terceiro()):
                 return True
             else:
                 print('Mais de um colaborador foi encontrado, '

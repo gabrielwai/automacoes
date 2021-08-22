@@ -1,27 +1,37 @@
 import xml.etree.ElementTree as ET
-from selenium import webdriver
 import Automacoes.Chamado
 
 
 class HPServiceManager:
-    def __init__(self, link='https://app.mapfre.com/smbbex/index.do?lang=pt-Br&mode=index.do&logout_msg=LogoutPage.session_timeout',
-                 arquivoXML='Chamados/loginHPServiceManager.xml'):
+    def __init__(self, usuario, senha, tipoNavegador, email=None, link='https://app.mapfre.com/smbbex/index.do?lang=pt-Br&mode=index.do&logout_msg=LogoutPage.session_timeout'):
+        self.__navegador = None
         self.__link = link
         self.__chamados = set()
-        self.__usuario, self.__senha, self.__email = self.transcrever_xml_login(arquivoXML)
-        self.__navegador = webdriver.Chrome()
+        self.__tipoNavegador = tipoNavegador
+        self.__usuario, self.__senha, self.__email = usuario, senha, email
 
 
-    def login(self):
-        if not Autentificador(self.getUsuario(), self.getSenha()):
-            print('Insira o login para acesso ao sistema HP Service Manager no respectivo arquivo xml.')
-            print('Falha ao realizar o login no sistema HP Service Manager.'); exit()
-
-        if Automacoes.Chamado.loginHPServiceManager(self.getNavegador(), self.getLink(), self.getUsuario(), self.getSenha(), statusLogin=True):
-            return True
-        else:
+        if not Automacoes.Chamado.loginHPServiceManager(self.getNavegador(), self.getLink(), self.getUsuario(), self.getSenha(), statusLogin=True):
             print("Erro ao efetuar o login.")
-            return False
+            exit()
+
+
+    def getNavegador(self):
+        if not bool(self.__navegador):
+            self.__navegador = self.__tipoNavegador.criarNavegador()
+        return self.__navegador
+
+
+    def pesquisarChamado(self, chamado):
+        chamado = chamado.strip()
+        if chamado[0] == "S":
+            xpath = '//*[@id="ext-gen-top125"]/span'
+        elif chamado[0] == "I":
+            xpath = '//*[@id="ext-gen-top173"]'
+        else:
+            xpath = '//*[@id="ext-gen-top254"]/span'
+
+        Automacoes.Chamado.localizar(chamado, self.__getNavegador, xpath)
 
 
     def adicionarChamado(self, SD):
@@ -30,10 +40,6 @@ class HPServiceManager:
 
     def getChamados(self):
         return self.__chamados
-
-
-    def getNavegador(self):
-        return self.__navegador
 
 
     def getUsuario(self):

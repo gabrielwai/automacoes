@@ -5,15 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import ElementClickInterceptedException
 from Chamados.HPLoginErros import HPLoginErros
-import time
-
-# from selenium import webdriver
-# #
-# x = webdriver.Chrome()
-# x.find_element_by_id('ext-gen-top5')
-# x.window_handles()
-# x.switch_to.frame()
-
+from selenium import webdriver
 
 def loginHPServiceManager(navegador, link, usuario, senha, statusLogin=True):
 
@@ -36,22 +28,22 @@ def loginHPServiceManager(navegador, link, usuario, senha, statusLogin=True):
     contador = 0
     exceptions = 0
     while exceptions == contador:
-        print('Start')
+        # print('Start')
         try:
             navegador.find_element_by_xpath('//*[@id="ext-gen-top172"]').click()
         except ElementClickInterceptedException or NoSuchElementException:
-            print('Deu ruim')
+            # print('Deu ruim')
             exceptions += 1
             exceptions = exceptions % 2
-            print(f'exceptions: {exceptions}')
+            # print(f'exceptions: {exceptions}')
         contador += 1
         contador = contador % 2
-        print(f'contador: {contador}')
-    print(f'sai; contador = {contador}')
+        # print(f'contador: {contador}')
+    # print(f'sai; contador = {contador}')
     x = navegador.find_element_by_xpath('//*[@id="ext-gen-top172"]')
     print(x)
     x.click()
-    print('retornando da função')
+    # print('retornando da função')
     return True
 
 
@@ -77,14 +69,14 @@ def localizar(chamado, HPServiceManager_navegador, xpath):
     # WebDriverWait(navegador, 35).until(EC.element_to_be_selected((By.XPATH, xpath)))
     navegador.find_element_by_xpath(xpath).click()
     navegador.find_element_by_xpath('//*[@id="ext-gen-top186"]').click()
-    print("Clicou")
+    # print("Clicou")
 
     a = '//*[@id="X11"]'
     navegador.implicitly_wait(35)
     navegador.switch_to.frame(navegador.find_element(By.CSS_SELECTOR, "iframe[title='Exibir quais Registros de Incidente?']"))
     navegador.find_element_by_xpath(a).send_keys(chamado)
     navegador.find_element_by_xpath(a).send_keys(Keys.RETURN)
-    print('Tentei já...')
+    # print('Tentei já...')
     return True
     #print("handles", navegador.window_handles())
     #navegador.switch_to.frame('mif-comp-ext-gen-top66-355310')
